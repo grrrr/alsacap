@@ -33,7 +33,7 @@
 #include <alsa/asoundlib.h>
 #include <errno.h>
 #include <string.h>
-
+#include <ctype.h>
 
 /*============================================================================
          Constant and type definitions
@@ -156,7 +156,7 @@ int main(int argc, char **argv)
       if( !argpar ) errarg('f');
       if( hwpind+3 > SIZE_HWP ) errtoomany();
       options.hwparams[hwpind++]= HWP_FORMAT;
-      options.hwparams[hwpind++]= parse_alsaformat(argpar);
+      options.hwparams[hwpind++]= parse_alsaformats(argpar);
     }
     else {
       fprintf(stderr, "Unrecognised command-line option `%s'.\n", argv[argind]);
