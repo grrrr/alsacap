@@ -592,7 +592,7 @@ static struct fmtdef fmtlist[]= {
   NULL, 0
 };
 
-int parse_alsaformat(const char *fmtstr)
+int parse_alsaformats(const char *fmtstr)
 {
   struct fmtdef *search;
 
